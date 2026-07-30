@@ -130,6 +130,7 @@ export class FinaleScene {
     // Everything fades, and the sky is just a sky again.
     this.slotEls.forEach((el) => el.classList.remove('is-photo'));
     this.linksLineEl?.classList.remove('is-visible');
+    this.routeLineEl?.classList.add('is-fading');
     await wait(1400);
     if (token !== this._runToken) return;
 

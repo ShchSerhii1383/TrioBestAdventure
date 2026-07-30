@@ -2306,7 +2306,11 @@
 .finale-route__line {
   stroke-dasharray: 400;
   stroke-dashoffset: 400;
-  transition: stroke-dashoffset 2.4s cubic-bezier(0.4, 0, 0.3, 1);
+  transition: stroke-dashoffset 2.4s cubic-bezier(0.4, 0, 0.3, 1), opacity 1.4s ease;
+}
+
+.finale-route__line.is-fading {
+  opacity: 0;
 }
 
 .finale-links__line {
@@ -3906,6 +3910,7 @@
   transform: rotate(-2.5deg) scale(1);
   pointer-events: none;
   transition: opacity 1s var(--ease-soft);
+  z-index: 2; 
 }
 
 .scroll__photo.is-visible {
